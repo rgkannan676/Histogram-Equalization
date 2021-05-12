@@ -20,7 +20,7 @@ def traverseToGoogleDriveFolder():
     from google.colab import drive
     drive.mount('/content/gdrive',force_remount=True)
     os.chdir('/content/gdrive')
-    folder_name = 'ComputerVision_Assg1'
+    folder_name = 'workFolder'
     import subprocess
     path_to_folder = subprocess.check_output('find . -type d -name ' + str(folder_name), shell=True).decode("utf-8")
     path_to_folder = path_to_folder.replace('\n',"")
